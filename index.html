@@ -19,7 +19,6 @@
       <h3 id="ex2-titol">Exercici 2</h3>
 
       <h2 id="titol-dinamic">Títol de la plantilla</h2>
-      <!-- ATENCIÓ: ha d’acabar sent “Pràctica JS Bàsica” -->
 
 
       <ul id="elements">
@@ -43,12 +42,60 @@
           </tr>
         </tbody>
       </table>
-
-    
+      <div id="controles" style="margin: 20px 0; padding: 10px; border: 1px dashed #ccc;">
+        <h3>Panel de Control</h3>
+        <button id="btn-add-li">Afegeix Element (Llista)</button>
+        <button id="btn-clear-li">Neteja Llista</button>
+        <br><br>
+        <button id="btn-add-row">Afegeix Fila (Taula)</button>
+        <button id="btn-dark-mode">Mode Foscor</button>
+    </div>
       <article id="paragrafs">
         <p>Paràgraf 1. Fes doble clic per imprimir el text per consola.</p>
         <p>Paràgraf 2. Doble clic també aquí.</p>
       </article>
+    </section>
+    <section id="ex3" aria-labelledby="ex3-titol" style="margin-top: 40px; border-top: 2px solid #ccc; padding-top: 20px;">
+      <h3 id="ex3-titol">Exercici 3: Formulari de Registre</h3>
+
+      <form id="form-basic" novalidate style="max-width: 400px; display: flex; flex-direction: column; gap: 15px;">
+
+        <div class="form-group">
+          <input type="text" id="usuari" placeholder="Usuari*" style="width: 100%; padding: 8px;" />
+          <span class="error" id="error-usuari"></span>
+        </div>
+
+        <div class="form-group">
+          <input type="password" id="contrasenya" placeholder="Contrasenya*" style="width: 100%; padding: 8px;" />
+          <span class="error" id="error-contrasenya"></span>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="codiPostal" placeholder="Codi Postal*" style="width: 100%; padding: 8px;" />
+          <span class="error" id="error-cp"></span>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="telefon" placeholder="Telèfon*" style="width: 100%; padding: 8px;" />
+          <span class="error" id="error-telefon"></span>
+        </div>
+
+        <div class="form-group">
+          <select id="provincia" style="width: 100%; padding: 8px;">
+            <option value="">--Tria província*--</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Girona">Girona</option>
+            <option value="Lleida">Lleida</option>
+            <option value="Tarragona">Tarragona</option>
+          </select>
+          <span class="error" id="error-provincia"></span>
+        </div>
+
+        <button type="submit" id="btn-submit" style="padding: 10px; cursor: pointer;">Enviar</button>
+        
+        <div id="missatges" style="font-weight: bold; margin-top: 10px;"></div>
+
+      </form>
     </section>
   </main>
 
@@ -57,4 +104,5 @@
   <!-- Scripts -->
   <script src="js/script.js" defer></script>
 </body>
+<!-- Autor [T] Adrián Díaz-->
 </html>
